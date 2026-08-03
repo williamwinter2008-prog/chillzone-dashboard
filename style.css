@@ -359,3 +359,42 @@ nav{
 }
 
 }
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+border-radius:12px;
+
+border:none;
+
+margin-bottom:15px;
+
+font-size:16px;
+
+background:rgba(255,255,255,.08);
+
+color:var(--text);
+
+border:1px solid var(--border);
+
+}
+
+body.light input,
+body.light textarea{
+
+background:white;
+
+color:#111;
+
+}
+
+textarea{
+
+resize:vertical;
+
+min-height:180px;
+
+}
