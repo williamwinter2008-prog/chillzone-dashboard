@@ -1,3 +1,4 @@
+</body>
 const button = document.getElementById("theme-toggle");
 
 if (localStorage.getItem("theme") === "light") {
@@ -16,3 +17,9 @@ button.addEventListener("click", () => {
         button.textContent = "🌙";
     }
 });
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
