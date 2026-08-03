@@ -132,3 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+const banToggle = document.getElementById("banToggle");
+
+if (banToggle) {
+    banToggle.checked = localStorage.getItem("ban") === "true";
+
+    banToggle.addEventListener("change", () => {
+        localStorage.setItem("ban", banToggle.checked);
+    });
+}
