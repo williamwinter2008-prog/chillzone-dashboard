@@ -1,17 +1,13 @@
-<h1>Bot Commands</h1>
+"use client";
 
-<button onclick="enableCommand()">Enable Moderation</button>
+import { useRouter } from "next/navigation";
 
-<button onclick="disableCommand()">Disable Welcome Messages</button>
+export default function Dashboard() {
+  const router = useRouter();
 
-<script>
-
-function enableCommand(){
-alert("Moderation command enabled!");
+  return (
+    <button onClick={() => router.push("/dashboard/moderation")}>
+      Open
+    </button>
+  );
 }
-
-function disableCommand(){
-alert("Welcome messages disabled!");
-}
-
-</script>
