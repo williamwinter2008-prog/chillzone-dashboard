@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands | PixelBot Dashboard</title>
 
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        🤖 PixelBot
+    </div>
+
+    <ul>
+
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+        <li class="active"><a href="commands.html">🤖 Commands</a></li>
+
+        <li><a href="moderation.html">🛡 Moderation</a></li>
+
+        <li><a href="tickets.html">🎫 Tickets</a></li>
+
+        <li><a href="welcome.html">👋 Welcome</a></li>
+
+        <li><a href="logs.html">📜 Logs</a></li>
+
+        <li><a href="settings.html">⚙️ Settings</a></li>
+
+        <li><a href="index.html">⬅ Back to Website</a></li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<div>
+
+<h1>Commands</h1>
+
+<p>Enable or disable bot commands.</p>
+
+</div>
+
+<div>
+
+<button id="theme-toggle">🌙</button>
+
+</div>
+
+</header>
+
+<div class="panel">
+
+<h2>Moderation Commands</h2>
+
+<div class="setting">
+<span>Ban</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Kick</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Mute</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Warn</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<button class="save-btn">
+Save Changes
+</button>
+
+</div>
+
+<div class="panel">
+
+<h2>Fun Commands</h2>
+
+<div class="setting">
+<span>8ball</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Meme</span>
+
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Joke</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<button class="save-btn">
+Save Changes
+</button>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</div>
+
+</body>
+</html>
