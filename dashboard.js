@@ -22,3 +22,112 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+
+    const links = document.querySelectorAll(".nav-link");
+    const pages = document.querySelectorAll(".page");
+    const title = document.getElementById("page-title");
+
+
+    // Sidebar page switching
+    links.forEach(link => {
+
+        link.addEventListener("click", (e) => {
+
+            const page = link.dataset.page;
+
+            if (!page) return;
+
+            e.preventDefault();
+
+
+            pages.forEach(section => {
+                section.style.display = "none";
+            });
+
+
+            const selectedPage = document.getElementById(page);
+
+            if (selectedPage) {
+                selectedPage.style.display = "block";
+            }
+
+
+            links.forEach(item => {
+                item.classList.remove("active");
+            });
+
+
+            link.classList.add("active");
+
+
+            if (title) {
+                title.textContent =
+                page.charAt(0).toUpperCase() + page.slice(1);
+            }
+
+        });
+
+    });
+
+
+
+    // Dashboard card open buttons
+    const openButtons = document.querySelectorAll(".open-btn");
+
+
+    openButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const page = button.dataset.open;
+
+
+            pages.forEach(section => {
+                section.style.display = "none";
+            });
+
+
+            const selectedPage = document.getElementById(page);
+
+
+            if (selectedPage) {
+                selectedPage.style.display = "block";
+            }
+
+
+            if (title) {
+                title.textContent =
+                page.charAt(0).toUpperCase() + page.slice(1);
+            }
+
+        });
+
+    });
+
+
+
+    // Save buttons
+    const saveButtons = document.querySelectorAll(".save-btn");
+
+
+    saveButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const oldText = button.textContent;
+
+            button.textContent = "✅ Saved!";
+
+
+            setTimeout(() => {
+
+                button.textContent = oldText;
+
+            }, 2000);
+
+        });
+
+    });
+
+});
