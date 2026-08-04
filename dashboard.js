@@ -131,3 +131,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// Load real bot data
+
+fetch("http://localhost:3000/api/status")
+
+.then(response => response.json())
+
+.then(data => {
+
+
+    const status = document.getElementById("bot-status");
+    const members = document.getElementById("member-count");
+
+
+    if(status){
+
+        status.textContent =
+        data.status === "Online"
+        ? "🟢 Online"
+        : "🔴 Offline";
+
+    }
+
+
+    if(members){
+
+        members.textContent =
+        data.members + " Members";
+
+    }
+
+
+})
+
+.catch(error => {
+
+console.log("Could not connect to bot:", error);
+
+});
