@@ -129,26 +129,21 @@ color:white;
 
 /* Main */
 
-.main{
-
-margin-left:260px;
-
-width:calc(100% - 260px);
-
-padding:40px;
+.content{
+    margin-left:260px;
+    padding:30px;
+    width:calc(100% - 260px);
+}
 
 }
 
 header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-bottom:35px;
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    margin-bottom:30px;
+}
 }
 
 header h1{
@@ -391,4 +386,20 @@ text-align:center;
 
 color:var(--text2);
 
+}
+.top-buttons{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.server-select{
+    min-width:180px;
+    cursor:pointer;
+}
+
+#theme-toggle{
+    width:45px;
+    height:45px;
+    cursor:pointer;
 }
