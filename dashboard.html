@@ -1,129 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelBot Dashboard</title>
 
-    <link rel="stylesheet" href="dashboard.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PixelBot Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
 </head>
 
 <body>
 
 <div class="sidebar">
 
-    <div class="logo">
-        🤖 PixelBot
-    </div>
+<div class="logo">
 
-    <ul>
+<div class="logo-circle">
+🤖
+</div>
 
-        <li><a href="#">🏠 Dashboard</a></li>
+<h2>PixelBot</h2>
 
-        <a href="commands.html">
-    <button class="save-btn">Open</button>
-</a>
-
-       <a href="moderation.html">
-    <button class="save-btn">Open</button>
-</a>
-
-       <a href="tickets.html">
-    <button class="save-btn">Open</button>
-</a>
-
-      <a href="welcome.html">
-    <button class="save-btn">Open</button>
-</a>
-
-        <a href="logs.html">
-    <button class="save-btn">Open</button>
-</a>
-
-    <a href="settings.html">
-    <button class="save-btn">Open</button>
-</a>
-        <li><a href="index.html">⬅ Back to Website</a></li>
-
-    </ul>
+<p>Discord Dashboard</p>
 
 </div>
 
-<div class="main">
+<ul>
+
+<li>
+<a href="#" class="nav-link active" data-page="dashboard">
+🏠 Dashboard
+</a>
+</li>
+
+<li>
+<a href="#" class="nav-link" data-page="commands">
+🤖 Commands
+</a>
+</li>
+
+<li>
+<a href="#" class="nav-link" data-page="moderation">
+🛡 Moderation
+</a>
+</li>
+
+<li>
+<a href="#" class="nav-link" data-page="tickets">
+🎫 Tickets
+</a>
+</li>
+
+<li>
+<a href="#" class="nav-link" data-page="welcome">
+👋 Welcome
+</a>
+</li>
+
+<li>
+<a href="#" class="nav-link" data-page="logs">
+📜 Logs
+</a>
+</li>
+
+<li>
+<a href="#" class="nav-link" data-page="settings">
+⚙️ Settings
+</a>
+</li>
+
+<li>
+<a href="index.html">
+⬅ Website
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="content">
 
 <header>
 
-<h1>Dashboard</h1>
+<h1 id="page-title">
+Dashboard
+</h1>
 
-<button id="theme-toggle">🌙</button>
+<div class="top-buttons">
+
+<select class="server-select">
+
+<option>🌍 My Server</option>
+
+<option>Gaming Server</option>
+
+<option>Community</option>
+
+</select>
+
+<button id="theme-toggle">
+🌙
+</button>
+
+</div>
 
 </header>
 
-<div class="stats">
+<section id="dashboard" class="page">
 
-<div class="stat-card">
-<h2>Servers</h2>
-<p>523</p>
-</div>
+<div class="grid">
 
-<div class="stat-card">
-<h2>Users</h2>
-<p>48,291</p>
-</div>
+<div class="card">
 
-<div class="stat-card">
-<h2>Status</h2>
-<p style="color:#57F287;">🟢 Online</p>
-</div>
+<h3>
+🛡 Moderation
+</h3>
 
-</div>
+<p>
+Manage bans, kicks and automod.
+</p>
 
-<h2 style="margin-top:40px;">Controls</h2>
-
-<div class="stats">
-
-<div class="stat-card">
-<h3>🛡 Moderation</h3>
-<p>Manage bans, kicks and automod.</p>
-<button class="save-btn">Open</button>
-</div>
-
-<div class="stat-card">
-<h3>🎫 Tickets</h3>
-<p>Configure your ticket system.</p>
-<button class="save-btn">Open</button>
-</div>
-
-<div class="stat-card">
-<h3>👋 Welcome</h3>
-<p>Edit welcome messages.</p>
-<button class="save-btn">Open</button>
-</div>
-
-<div class="stat-card">
-<h3>📜 Logs</h3>
-<p>Manage logging channels.</p>
-<button class="save-btn">Open</button>
-</div>
-
-<div class="stat-card">
-<h3>🤖 Commands</h3>
-<p>Enable or disable commands.</p>
-<button class="save-btn">Open</button>
-</div>
-
-<div class="stat-card">
-<h3>⚙️ Settings</h3>
-<p>General bot configuration.</p>
-<button class="save-btn">Open</button>
-</div>
+<button class="open-btn" data-open="moderation">
+Open
+</button>
 
 </div>
 
+<div class="card">
+
+<h3>
+🤖 Commands
+</h3>
+
+<p>
+Enable and disable commands.
+</p>
+
+<button class="open-btn" data-open="commands">
+Open
+</button>
+
 </div>
 
-<script src="dashboard.js"></script>
+<div class="card">
 
-</body>
-</html>
+<h3>
+🎫 Tickets
+</h3>
+
+<p>
+Configure support tickets.
+</p>
+
+<button class="open-btn" data-open="tickets">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>
+👋 Welcome
+</h3>
+
+<p>
+Edit welcome messages.
+</p>
+
+<button class="open-btn" data-open="welcome">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>
+📜 Logs
+</h3>
+
+<p>
+Logging configuration.
+</p>
+
+<button class="open-btn" data-open="logs">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>
+⚙️ Settings
+</h3>
+
+<p>
+General bot settings.
+</p>
+
+<button class="open-btn" data-open="settings">
+Open
+</button>
+
+</div>
+
+</div>
+
+</section>
+<section id="commands" class="page" style="display:none;">
+
+<h2>🤖 Commands</h2>
+
+<div class="card">
+
+<div class="setting">
+<span>Ban Command</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Kick Command</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Warn Command</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Mute Command</span>
+
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+</div>
+
+<button class="save-btn">
+Save Changes
+</button>
+
+</div>
+
+</section>
+
+<section id="moderation" class="page" style="display:none;">
+
+<h2>🛡 Moderation</h2>
+
+<div class="card">
+
+<div class="setting">
+<span>Auto Moderation</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Anti Spam</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Bad Word Filter</span>
+
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="setting">
+<span>Raid Protection</span>
+
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+</div>
+
+<button class="save-btn">
+Save Changes
+</button>
+
+</div>
+
+</section>
+
+<section id="tickets" class="page" style="display:none;">
+
+<h2>🎫 Tickets</h2>
+
+<div class="card">
+
+<label>Support Category</label>
+
+<select class="input">
+
+<option>Support</option>
+
+<option>Reports</option>
+
+<option>Appeals</option>
+
+</select>
+
+<label>Staff Role</label>
+
+<select class="input">
+
+<option>Moderator</option>
+
+<option>Admin</option>
+
+</select>
+
+<label>Transcript Channel</label>
+
+<select class="input">
+
+<option>#transcripts</option>
+
+<option>#logs</option>
+
+</select>
+
+<button class="save-btn">
+
+Save Ticket Settings
+
+</button>
+
+</div>
+
+</section>
