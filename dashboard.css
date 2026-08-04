@@ -443,3 +443,36 @@ font-weight:bold;
 color:#22c55e;
 
 }
+.bot-profile{
+
+display:flex;
+align-items:center;
+gap:20px;
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+
+}
+
+
+.bot-avatar{
+
+width:70px;
+height:70px;
+background:#5865F2;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+
+}
+
+
+.bot-profile span{
+
+color:#22c55e;
+font-weight:bold;
+
+}
